@@ -6,20 +6,20 @@ function App() {
   return (
     <div className="App">
       <form>
-        <div>
+        <div className="fieldWrapper">
           <label htmlFor="email">email:</label>
           <input type="text"/>
         </div>
-        <div>
+        <div className="fieldWrapper">
           <label htmlFor="name">name:</label>
           <input type="text"/>
         </div>
-        <div>
+        <div className="fieldWrapper">
           <label htmlFor="address:">address:</label>
           <input type="text"/>
         </div>
 
-        <div>
+        <div className="fieldWrapper">
           <label htmlFor="country">country:</label>
           <select id="country" name="country">
             <option value="Australia">Australia</option>
