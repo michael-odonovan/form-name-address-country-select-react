@@ -2,10 +2,15 @@ import './App.css';
 
 // note that input elements in React have to be self closing tags
 
+function submitFunction(event) {
+  event.preventDefault()
+  console.log("help")
+}
+
 function App() {
   return (
     <div className="App">
-      <form>
+      <form onSubmit={submitFunction}>
         <div className="fieldWrapper">
           <label htmlFor="email">email:</label>
           <input type="text"/>
