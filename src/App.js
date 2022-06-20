@@ -3,13 +3,13 @@ import { useState } from 'react'
 
 // note that input elements in React have to be self closing tags
 
-
 function App() {
 
   const [contactInfo, setContactInfo] = useState({
     email: "",
     name: "",
     address: "",
+    country:"",
   })
 
   const handleChange = (event) => {
@@ -38,14 +38,14 @@ function App() {
           <input autoComplete="off" type="text" name="address" value={contactInfo.address} onChange={handleChange}/>
         </div>
 
-        {/* <div className="fieldWrapper"> */}
-        {/*   <label htmlFor="country">country:</label> */}
-        {/*   <select autoComplete="off" id="country" name="country"> */}
-        {/*     <option value="Australia">Australia</option> */}
-        {/*     <option value="Japan">Japan</option> */}
-        {/*     <option value="England">England</option> */}
-        {/*   </select> */}
-        {/* </div> */}
+        <div className="fieldWrapper">
+          <label htmlFor="country">country:</label>
+          <select autoComplete="off" id="country" name="country" value={contactInfo.country} onChange={handleChange}>
+            <option value="Australia">Australia</option>
+            <option value="Japan">Japan</option>
+            <option value="England">England</option>
+          </select>
+        </div>
 
         <input type="submit" value="submit form"/>
 
@@ -55,7 +55,7 @@ function App() {
         <div>{contactInfo.email}</div>
         <div>{contactInfo.name}</div>
         <div>{contactInfo.address}</div>
-        {/* <div>{country}</div> */}
+        <div>{contactInfo.country}</div>
       </div>
     </div>
   );
